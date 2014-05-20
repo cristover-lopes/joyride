@@ -42,7 +42,7 @@ function sendHelpMsg(){
   var userName = startData.PUSDERID;
   var studyName = startData.NAME;
   
-  var msg = 'My name is ' + userName + ' and I need help with Study: ' + studyName '.';
+  var msg = 'My name is ' + userName + ' and I need help with Study: ' + studyName + '.';
   
    gapi.hangout.data.sendMessage(msg);
 }
