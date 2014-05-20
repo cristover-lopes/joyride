@@ -44,8 +44,10 @@
 
 <div id="participantsDiv"></div>
 
+
 <hr>
 
+<div id="startDataDiv"></div>
 </body>
 ]]>
 </Content>
