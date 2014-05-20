@@ -56,11 +56,11 @@ function init() {
   gapi.hangout.onApiReady.add(
       function(eventObj) {
         if (eventObj.isApiReady) {
-          
+          gapi.hangout.onParticipantsAdded.add(sendHelpMsg)
           gapi.hangout.data.onMessageReceived.add(onMessageReceived);
           //load participants into DOM
           showParticipants(); 
-          sendHelpMsg();
+        
                 }
       });
 }
