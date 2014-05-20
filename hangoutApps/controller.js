@@ -23,6 +23,16 @@ function showParticipants() {
   div.innerHTML = retVal;
 }
 
+
+function showStartData() {
+
+  var startDataP = '<p>Data sent from app: ' + gapi.hangout.getStartData() +'</p>';
+  var div = document.getElementById('startDataDiv');
+  div.innerHTML = startDataP;
+}
+
+
+
 function init() {
   // When API is ready...                                                         
   gapi.hangout.onApiReady.add(
@@ -31,7 +41,7 @@ function init() {
           
           //load participants into DOM
           showParticipants(); 
-          console.log(gapi.hangout.getStartData())
+          showStartData();
                 }
       });
 }
