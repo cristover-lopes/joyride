@@ -41,7 +41,6 @@
 <script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
 <script src="//http://cristover-lopes.github.io/joyride/hangoutApps/controller.js"></script>
 
-<h3>Simple Hangout App</h3>
 
 <p>
 <input class="button" type="button" value="Show participants!" id="showParticipants" 
@@ -53,7 +52,6 @@
 
 <hr>
 
-<p><a href="http://developers.google.com/+/hangouts/getting-started">Read the docs</a> to learn more about developing hangouts!</a></p>
 </body>
 ]]>
 </Content>
