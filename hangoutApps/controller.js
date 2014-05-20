@@ -48,7 +48,7 @@ function init() {
       function(eventObj) {
         if (eventObj.isApiReady) {
           
-          gapi.hangout.data.onMessageReceived.add(onMessageReceived;
+          gapi.hangout.data.onMessageReceived.add(onMessageReceived);
           //load participants into DOM
           showParticipants(); 
           showStartData();
