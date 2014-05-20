@@ -48,6 +48,9 @@
 <hr>
 
 <div id="startDataDiv"></div>
+
+<hr>
+<ul id ="msgList"></div>
 </body>
 ]]>
 </Content>
