@@ -24,14 +24,6 @@ function showParticipants() {
 }
 
 
-function showStartData() {
-
-  var startDataP = '<p>Data sent from app: ' + gapi.hangout.getStartData() +'</p>';
-  var div = document.getElementById('startDataDiv');
-  div.innerHTML = startDataP;
-}
-
-
 //print the message
 function onMessageReceived(event){
   
@@ -40,6 +32,19 @@ function onMessageReceived(event){
   var listItem = document.createElement('li');
   listItem.appendChild(document.createTextNode(list));
   list.appendChild(listItem);
+}
+
+
+// send intial help message
+function sendHelpMsg(){
+  
+  var startData = gapi.hangout.getStartData();
+  var userName = startData.PUSDERID;
+  var studyName = startData.NAME;
+  
+  var msg = "My name is " + userName + ' and I need help with Study: ' + studyName '.';
+  
+   gapi.hangout.data.sendMessage(msg);
 }
 
 function init() {
@@ -51,7 +56,7 @@ function init() {
           gapi.hangout.data.onMessageReceived.add(onMessageReceived);
           //load participants into DOM
           showParticipants(); 
-          showStartData();
+          sendHelpMsg();
                 }
       });
 }
