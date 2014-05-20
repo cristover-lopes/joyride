@@ -51,12 +51,17 @@ function sendHelpMsg(){
   
 }
 
+
+function sendHelpMsgAndUpdateParticpantList(){
+  sendHelpMsg();
+  showParticipants();
+}
 function init() {
   // When API is ready...                                                         
   gapi.hangout.onApiReady.add(
       function(eventObj) {
         if (eventObj.isApiReady) {
-          gapi.hangout.onParticipantsAdded.add(sendHelpMsg)
+          gapi.hangout.onParticipantsAdded.add(sendHelpMsgAndUpdateParticpantList)
           gapi.hangout.data.onMessageReceived.add(onMessageReceived);
           //load participants into DOM
           showParticipants(); 
