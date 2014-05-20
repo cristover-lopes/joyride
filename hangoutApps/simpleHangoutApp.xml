@@ -42,11 +42,6 @@
 <script src="//cristover-lopes.github.io/joyride/hangoutApps/controller.js"></script>
 
 
-<p>
-<input class="button" type="button" value="Show participants!" id="showParticipants" 
-    onClick="showParticipants()"/>
-</p>
-
 <div id="participantsDiv"></div>
 
 <hr>
