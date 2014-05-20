@@ -32,6 +32,15 @@ function showStartData() {
 }
 
 
+//print the message
+function onMessageReceived(event){
+  
+  console.log(event.senderId + 'sent: ' + event.message);
+  var list = document.getElementById('msgList');
+  var listItem = document.createElement('li');
+  listItem.appendChild(document.createTextNode(list));
+  list.appendChild(listItem);
+}
 
 function init() {
   // When API is ready...                                                         
@@ -39,6 +48,7 @@ function init() {
       function(eventObj) {
         if (eventObj.isApiReady) {
           
+          gapi.hangout.data.onMessageReceived.add(onMessageReceived());
           //load participants into DOM
           showParticipants(); 
           showStartData();
