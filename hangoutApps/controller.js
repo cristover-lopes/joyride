@@ -29,6 +29,8 @@ function init() {
       function(eventObj) {
         if (eventObj.isApiReady) {
           
+          //load participants into DOM
+          showParticipants(); 
                 }
       });
 }
