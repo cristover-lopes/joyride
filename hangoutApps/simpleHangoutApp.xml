@@ -44,7 +44,6 @@
 
 <p>
 <input class="button" type="button" value="Show participants!" id="showParticipants" 
-    style="visibility:hidden;"
     onClick="showParticipants()"/>
 </p>
 
