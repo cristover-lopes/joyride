@@ -31,6 +31,7 @@ function init() {
           
           //load participants into DOM
           showParticipants(); 
+          console.log(gapi.hangout.getStartData())
                 }
       });
 }
